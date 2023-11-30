@@ -5,3 +5,4 @@ protocol,survey_irb.pdf,Institutional review board protocol for survey sampling 
 protocol,mapworkshop.pdf,participatory mapping workshop protocol
 code,script2.R,run analysis
 code,script3.R,generate visualizations for results
+code, 01-RPr-Chicago-Greenspaces, run code 
