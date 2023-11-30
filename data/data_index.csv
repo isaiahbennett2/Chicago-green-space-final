@@ -1,2 +1,5 @@
 path,name,metadata,description
 raw/public,Blocks2010.shp,Blocks2010meta.md,census blocks with demographic data
+raw/public,Tracks2010dirdist.shp,Tracks2010dirdistmeta.md,census tracts with TRACTCE field that uniquely identifies which tract the block belongs to
+raw/public,Parks.shp,Parksmeta.md,vectors of Chicago city parks
+raw/public,Forests.shp,Forestsmeta.md,vectors of forest green spaces
