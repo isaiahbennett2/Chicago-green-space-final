@@ -27,16 +27,3 @@ Geographic Information System: Version 13.0 [Database]. Minneapolis: University 
 | D008 | ... | Not Hispanic or Latino: - Population of one race: - Asian alone | ... | ... | ... | ... | ... |
 | D009 | ... | Not Hispanic or Latino: - Population of one race: - Native Hawaiian and Other Pacific Islander alone | ... | ... | ... | ... | ... |
 | D010 | ... | Not Hispanic or Latino: - Population of one race: - Some Other Race alone | ... | ... | ... | ... | ... |
-
-
-
-
-
-
-
-
-
-
-
-
-![image](https://github.com/isaiahbennett2/Chicago-green-space-final/assets/144823115/05d603cc-8456-4e7b-97bf-ffcd43480f29)
