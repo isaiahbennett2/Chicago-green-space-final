@@ -1,4 +1,4 @@
-- `Title`: Blocks2010
+- `Title`: Blocks2010.shp
 - `Abstract`: census blocks from the 2010 Census for Chicago containing with demographic data joined from the P2
 - `Spatial Coverage`: The city of Chicago, Illinois
 - `Spatial Resolution`: Block groups
