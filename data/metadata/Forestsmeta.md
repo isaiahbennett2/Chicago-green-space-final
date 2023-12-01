@@ -1,20 +1,33 @@
-- `Title`: Title of data source
-- `Abstract`: Brief description of the data source
-- `Spatial Coverage`: Specify the geographic extent of your study. This may be a place name and link to a feature in a gazetteer like GeoNames or OpenStreetMap, or a well known text (WKT) representation of a bounding box.
-- `Spatial Resolution`: Specify the spatial resolution as a scale factor, description of the level of detail of each unit of observation (including administrative level of administrative areas), and/or or distance of a raster GRID size
-- `Spatial Reference System`: Specify the geographic or projected coordinate system for the study
+- `Title`: Blocks2010
+- `Abstract`: census blocks from the 2010 Census for Chicago containing with demographic data joined from the P2
+- `Spatial Coverage`: The city of Chicago, Illinois
+- `Spatial Resolution`: Block groups
+- `Spatial Reference System`: EPSG 6454
 - `Temporal Coverage`: Specify the temporal extent of your study---i.e. the range of time represented by the data observations.
-- `Temporal Resolution`: Specify the temporal resolution of your study---i.e. the duration of time for which each observation represents or the revisit period for repeated observations
-- `Lineage`: Describe and/or cite data sources and/or methodological steps taken or planned to create this data source, e.g.:
-  - sampling scheme, including spatial sampling
-  - target sample size and method for determining sample size
-  - stopping criteria for data collection and sampling (e.g. sample size, time elapsed)
-  - de-identification / anonymization
-  - experimental manipulation
-- `Distribution`: Describe who will make the data available and how?
+- `Temporal Resolution`: 2010
+- `Lineage`: Data was downloaded from Middlebury College Geog 120 Week 07 Lab which collected the data from Steven Manson, Jonathan Schroeder, David Van Riper, and Steven Ruggles. IPUMS National Historical
+Geographic Information System: Version 13.0 [Database]. Minneapolis: University of Minnesota. 2018. http://doi.org/10.18128/D050.V13.0.
+- `Distribution`: Data is available 
 - `Constraints`: Legal constraints for *access* or *use* to protect *privacy* or *intellectual property rights*
 - `Data Quality`: State any planned quality assessment
-- `Variables`: For each variable, enter the following information. If you have two or more variables per data source, you may want to present this information in table form (shown below)
+- `Variables`:
+
+-GEO.id	Id
+GEO.id2	Id2
+GEO.display-label	Geography
+D001	Total Population:
+D002	Hispanic or Latino
+D003	Not Hispanic or Latino:
+D004	Not Hispanic or Latino: - Population of one race:
+D005	Not Hispanic or Latino: - Population of one race: - White alone
+D006	Not Hispanic or Latino: - Population of one race: - Black or African American alone
+D007	Not Hispanic or Latino: - Population of one race: - American Indian and Alaska Native alone
+D008	Not Hispanic or Latino: - Population of one race: - Asian alone
+D009	Not Hispanic or Latino: - Population of one race: - Native Hawaiian and Other Pacific Islander alone
+D010	Not Hispanic or Latino: - Population of one race: - Some Other Race alone!
+
+-
+- For each variable, enter the following information. If you have two or more variables per data source, you may want to present this information in table form (shown below)
   - `Label`: variable name as used in the data or code
   - `Alias`: intuitive natural language name
   - `Definition`: Short description or definition of the variable. Include measurement units in description.
@@ -27,4 +40,29 @@
 | Label | Alias | Definition | Type | Accuracy | Domain | Missing Data Value(s) | Missing Data Frequency |
 | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
 | variable1 | ... | ... | ... | ... | ... | ... | ... |
-| variable2 | ... | ... | ... | ... | ... | ... | ... |
+| GEO.id | ... |
+| GEO.id2 | ... |
+| GEO.display-label | ... |
+| D001 | ... |
+| D002 | ... |
+| D003 | ... |
+| D004 | ... |
+| D005 | ... |
+| D006 | ... |
+| D007 | ... |
+| D008 | ... |
+| D009 | ... |
+| D010 | ... |
+Id
+Id2
+Geography
+Total Population:
+Hispanic or Latino
+Not Hispanic or Latino:
+Not Hispanic or Latino: - Population of one race:
+Not Hispanic or Latino: - Population of one race: - White alone
+Not Hispanic or Latino: - Population of one race: - Black or African American alone
+Not Hispanic or Latino: - Population of one race: - American Indian and Alaska Native alone
+Not Hispanic or Latino: - Population of one race: - Asian alone
+Not Hispanic or Latino: - Population of one race: - Native Hawaiian and Other Pacific Islander alone
+Not Hispanic or Latino: - Population of one race: - Some Other Race alone![image](https://github.com/isaiahbennett2/Chicago-green-space-final/assets/144823115/05d603cc-8456-4e7b-97bf-ffcd43480f29)
