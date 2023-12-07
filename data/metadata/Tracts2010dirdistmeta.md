@@ -25,16 +25,16 @@ Geographic Information System: Version 13.0 [Database]. Minneapolis: University 
 | Label | Alias | Definition | Type | Accuracy | Domain | Missing Data Value(s) | Missing Data Frequency |
 | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
 | variable1 | ... | ... | ... | ... | ... | ... | ... |
-| GEO.id | ... | Id | string
-| GEO.id2 | ... | Id2 | string 
-| GEO.display-label | ... | Geography | geometry
-| D001 | ... | Total Population | int
-| D002 | ... | Hispanic or Latino | int
-| D003 | ... | Not Hispanic or Latino | int
-| D004 | ... | Not Hispanic or Latino: - Population of one race | int
-| D005 | ... | Not Hispanic or Latino: - White alone | int
-| D006 | ... | Not Hispanic or Latino: - Black or African American alone | int
-| D007 | ... | Not Hispanic or Latino: - American Indian and Alaska Native alone | int
-| D008 | ... | Not Hispanic or Latino: - Asian alone | int
-| D009 | ... | Not Hispanic or Latino: - Native Hawaiian and Other Pacific Islander alone | int
-| D010 | ... | Not Hispanic or Latino: - Some Other Race alone | int
+| GEO.id | ... | Id | string | ... | ... | ... | ... |
+| GEO.id2 | ... | Id2 | string | ... | ... | ... | ... | 
+| GEO.display-label | ... | Geography | geometry | ... | ... | ... | ... |
+| D001 | ... | Total Population | int | ... | ... | ... | ... |
+| D002 | ... | Hispanic or Latino | int | ... | ... | ... | ... |
+| D003 | ... | Not Hispanic or Latino | int | ... | ... | ... | ... |
+| D004 | ... | Not Hispanic or Latino: - Population of one race | int | ... | ... | ... | ... |
+| D005 | ... | Not Hispanic or Latino: - White alone | int | ... | ... | ... | ... |
+| D006 | ... | Not Hispanic or Latino: - Black or African American alone | int | ... | ... | ... | ... |
+| D007 | ... | Not Hispanic or Latino: - American Indian and Alaska Native alone | int | ... | ... | ... | ... |
+| D008 | ... | Not Hispanic or Latino: - Asian alone | int | ... | ... | ... | ... |
+| D009 | ... | Not Hispanic or Latino: - Native Hawaiian and Other Pacific Islander alone | int | ... | ... | ... | ... |
+| D010 | ... | Not Hispanic or Latino: - Some Other Race alone | int | ... | ... | ... | ... |
