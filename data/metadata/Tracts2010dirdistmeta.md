@@ -1,11 +1,11 @@
-- `Title`: Blocks2010
-- `Abstract`: census blocks from the 2010 Census for Chicago containing with demographic data joined from the P2
+- `Title`: Tracts2010
+- `Abstract`: census tracts from the 2010 Census for Chicago containing with demographic data joined from the P2 
 - `Spatial Coverage`: The city of Chicago, Illinois
-- `Spatial Resolution`: Block groups
+- `Spatial Resolution`: Tracts
 - `Spatial Reference System`: EPSG 6454
 - `Temporal Coverage`: Specify the temporal extent of your study---i.e. the range of time represented by the data observations.
 - `Temporal Resolution`: 2010
-- `Lineage`: Data was downloaded from Middlebury College Geog 120 Week 07 Lab which collected the data from Steven Manson, Jonathan Schroeder, David Van Riper, and Steven Ruggles. IPUMS National Historical
+- `Lineage`: Data was downloaded from Middlebury College Geog 120 Week 04 Lab: Urban Models of Segregation by Race and Class which collected the data from Steven Manson, Jonathan Schroeder, David Van Riper, and Steven Ruggles. IPUMS National Historical
 Geographic Information System: Version 13.0 [Database]. Minneapolis: University of Minnesota. 2018. http://doi.org/10.18128/D050.V13.0.
 - `Distribution`: Data is available 
 - `Constraints`: Legal constraints for *access* or *use* to protect *privacy* or *intellectual property rights*
@@ -24,16 +24,34 @@ Geographic Information System: Version 13.0 [Database]. Minneapolis: University 
 
 | Label | Alias | Definition | Type | Accuracy | Domain | Missing Data Value(s) | Missing Data Frequency |
 | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
-| GEO.id | ... | Id | string | ... | ... | ... | ... |
-| GEO.id2 | ... | Id2 | string | ... | ... | ... | ... | 
-| GEO.display-label | ... | Geography | geometry | ... | ... | ... | ... |
-| D001 | ... | Total Population | int | ... | ... | ... | ... |
-| D002 | ... | Hispanic or Latino | int | ... | ... | ... | ... |
-| D003 | ... | Not Hispanic or Latino | int | ... | ... | ... | ... |
-| D004 | ... | Not Hispanic or Latino: - Population of one race | int | ... | ... | ... | ... |
-| D005 | ... | Not Hispanic or Latino: - White alone | int | ... | ... | ... | ... |
-| D006 | ... | Not Hispanic or Latino: - Black or African American alone | int | ... | ... | ... | ... |
-| D007 | ... | Not Hispanic or Latino: - American Indian and Alaska Native alone | int | ... | ... | ... | ... |
-| D008 | ... | Not Hispanic or Latino: - Asian alone | int | ... | ... | ... | ... |
-| D009 | ... | Not Hispanic or Latino: - Native Hawaiian and Other Pacific Islander alone | int | ... | ... | ... | ... |
-| D010 | ... | Not Hispanic or Latino: - Some Other Race alone | int | ... | ... | ... | ... |
+| fid| :--: | object id | int
+| STATEFP10| :--: | state id | int
+| COUNTYFP10| :--: | county id | int
+| TRACTCE10| :--: | tract id | int
+| GEOID10| :--: | geography id | int
+| NAME10| :--: | ? |  int
+| NAMELSAD10| :--: | census tract name | string 
+| GISJOIN| :--: | uniquely identifies tracts for purpose of joining to geographic data | string
+| PopTotal| :--: | total population |  int
+| Latinx| :--: | total Hispanic or Latino/Latina population | int
+| NotLatinx| :--: | total non-Hispanic White population | int
+| White| :--: | total non-Hispanic White population | int
+| Black| :--: | total non-Hispanic Black or African American population | int
+| Asian| :--: | total non-Hispanic Asian population | int
+| TwoOrMore| :--: | ? | int
+| MedHouseVa| :--: | median house value for owner-occupied houses | int
+| MedGrossRe| :--: | median gross monthly rent (including utilities) | int
+| pctWhite| :--: | percent white population | double
+| pctBlack| :--: | percent black population | double
+| pctLatinx| :--: | percent latinx population | double
+| pctAsian| :--: | percent asian population | double
+
+
+
+
+
+
+
+
+
+
