@@ -23,4 +23,4 @@
 
 | Label | Alias | Definition | Type | Accuracy | Domain | Missing Data Value(s) | Missing Data Frequency |
 | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
-|  NAME | :--: | single multi feature polygon with all forest areas | string |
+|  NAME | :--: | single multi feature polygon with all forest areas | string | 
