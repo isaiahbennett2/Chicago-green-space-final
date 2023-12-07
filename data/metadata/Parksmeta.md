@@ -24,10 +24,3 @@
 | Label | Alias | Definition | Type | Accuracy | Domain | Missing Data Value(s) | Missing Data Frequency |
 | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
 | parkName | :--: | names of every park in Chicago | string |
-
-
-
-| D007 | ... | Not Hispanic or Latino: - American Indian and Alaska Native alone | int | ... | ... | ... | ... |
-| D008 | ... | Not Hispanic or Latino: - Asian alone | int | ... | ... | ... | ... |
-| D009 | ... | Not Hispanic or Latino: - Native Hawaiian and Other Pacific Islander alone | int | ... | ... | ... | ... |
-| D010 | ... | Not Hispanic or Latino: - Some Other Race alone | int | ... | ... | ... | ... |
