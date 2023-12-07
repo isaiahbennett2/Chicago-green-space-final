@@ -24,7 +24,6 @@ Geographic Information System: Version 13.0 [Database]. Minneapolis: University 
 
 | Label | Alias | Definition | Type | Accuracy | Domain | Missing Data Value(s) | Missing Data Frequency |
 | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
-| variable1 | ... | ... | ... | ... | ... | ... | ... |
 | GEO.id | ... | Id | string | ... | ... | ... | ... |
 | GEO.id2 | ... | Id2 | string | ... | ... | ... | ... | 
 | GEO.display-label | ... | Geography | geometry | ... | ... | ... | ... |
