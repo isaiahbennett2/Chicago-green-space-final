@@ -1,12 +1,11 @@
-- `Title`: Blocks2010
-- `Abstract`: census blocks from the 2010 Census for Chicago containing with demographic data joined from the P2
+- `Title`: parks
+- `Abstract`: parks in Chicago
 - `Spatial Coverage`: The city of Chicago, Illinois
-- `Spatial Resolution`: Block groups
+- `Spatial Resolution`: park polygons 
 - `Spatial Reference System`: EPSG 6454
 - `Temporal Coverage`: Specify the temporal extent of your study---i.e. the range of time represented by the data observations.
 - `Temporal Resolution`: 2010
-- `Lineage`: Data was downloaded from Middlebury College Geog 120 Week 07 Lab which collected the data from Steven Manson, Jonathan Schroeder, David Van Riper, and Steven Ruggles. IPUMS National Historical
-Geographic Information System: Version 13.0 [Database]. Minneapolis: University of Minnesota. 2018. http://doi.org/10.18128/D050.V13.0.
+- `Lineage`: Data was downloaded from Middlebury College Geog 120 Week 07 Lab Urban Environmental Justice of Green Space Access in Chicago
 - `Distribution`: Data is available 
 - `Constraints`: Legal constraints for *access* or *use* to protect *privacy* or *intellectual property rights*
 - `Data Quality`: State any planned quality assessment
@@ -24,15 +23,10 @@ Geographic Information System: Version 13.0 [Database]. Minneapolis: University 
 
 | Label | Alias | Definition | Type | Accuracy | Domain | Missing Data Value(s) | Missing Data Frequency |
 | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
-| GEO.id | ... | Id | string | ... | ... | ... | ... |
-| GEO.id2 | ... | Id2 | string | ... | ... | ... | ... | 
-| GEO.display-label | ... | Geography | geometry | ... | ... | ... | ... |
-| D001 | ... | Total Population | int | ... | ... | ... | ... |
-| D002 | ... | Hispanic or Latino | int | ... | ... | ... | ... |
-| D003 | ... | Not Hispanic or Latino | int | ... | ... | ... | ... |
-| D004 | ... | Not Hispanic or Latino: - Population of one race | int | ... | ... | ... | ... |
-| D005 | ... | Not Hispanic or Latino: - White alone | int | ... | ... | ... | ... |
-| D006 | ... | Not Hispanic or Latino: - Black or African American alone | int | ... | ... | ... | ... |
+| parkName | :--: | names of every park in Chicago | string |
+
+
+
 | D007 | ... | Not Hispanic or Latino: - American Indian and Alaska Native alone | int | ... | ... | ... | ... |
 | D008 | ... | Not Hispanic or Latino: - Asian alone | int | ... | ... | ... | ... |
 | D009 | ... | Not Hispanic or Latino: - Native Hawaiian and Other Pacific Islander alone | int | ... | ... | ... | ... |
