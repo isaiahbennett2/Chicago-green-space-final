@@ -34,33 +34,31 @@ A graphical abstract of the study could also be included as an image here.
 
 ### Study metadata
 
-- `Key words`: Comma-separated list of keywords (tags) for searchability. Geographers often use one or two keywords each for: theory, geographic context, and methods.
-- `Subject`: select from the [BePress Taxonomy](http://digitalcommons.bepress.com/cgi/viewcontent.cgi?article=1008&context=reference)
-- `Date created`: date when project was started
-- `Date modified`: date of most recent revision
-- `Spatial Coverage`: Specify the geographic extent of your study. This may be a place name and link to a feature in a gazetteer like GeoNames or OpenStreetMap, or a well known text (WKT) representation of a bounding box.
-- `Spatial Resolution`: Specify the spatial resolution as a scale factor, description of the level of detail of each unit of observation (including administrative level of administrative areas), and/or or distance of a raster GRID size
-- `Spatial Reference System`: Specify the geographic or projected coordinate system for the study, e.g. EPSG:4326
-- `Temporal Coverage`: Specify the temporal extent of your study---i.e. the range of time represented by the data observations.
-- `Temporal Resolution`: Specify the temporal resolution of your study---i.e. the duration of time for which each observation represents or the revisit period for repeated observations
-- `Funding Name`: name of funding for the project
-- `Funding Title`: title of project grant
-- `Award info URI`: web address for award information
-- `Award number`: award number
+- `Key words`: Green space, racial majority, access, Chicago, Illinois, overlay, buffer, aggregation.
+- `Subject`: Social and Behavioral Sciences: Geography: Nature and Society Relations
+- `Date created`: November 30, 2023
+- `Date modified`: December 14, 20203
+- `Spatial Coverage`: The city of Chicago, Illinois
+- `Spatial Resolution`: Tracts
+- `Spatial Reference System`: EPSG 6454
+- `Temporal Coverage`: 2010
+- `Temporal Resolution`: Decennial census
+
 
 #### Original study spatio-temporal metadata
 
 - `Spatial Coverage`: The city of Chicago, Illinois
 - `Spatial Resolution`: Tracts
 - `Spatial Reference System`: EPSG 6454
-- `Temporal Coverage`: Decennial census
-- `Temporal Resolution`: 2010
+- `Temporal Coverage`: 2010
+- `Temporal Resolution`: Decennial census
+
 
 ## Study design
 
-This study is a reproduction study of an unpublished geography study that was made for Middlebury College's Human Geography with GIS class to be done in QGIS. I completed the study last spring when I was in the course Human Geography with GIS, but wanted to revisit it through a computational environment to contribute to the world of reproducible science. Since this is not a computationally intensive study, its purpose is to act as a simple example to show new GIScientists what the world of reproduction lools like by demonstrating easily digestible components of reproducible research such as making a preanalysis plan (preregistration), setting up a reproducible computational environment, sharing data and metadata, sharing methods and code, working through a reproduction study notebook, and exploring a research compendium. 
+This study is a reproduction study of an unpublished geography study that was made for Middlebury College's Human Geography with GIS class to be done in QGIS. I completed the study last spring when I was in the course Human Geography with GIS, but wanted to revisit it through a computational environment to contribute to the world of reproducible science. Since this is not a computationally intensive study, its purpose is to act as a simple example to show new GIScientists what the world of reproduction looks like by demonstrating easily digestible components of reproducible research such as making a pre-analysis plan (preregistration), setting up a reproducible computational environment, sharing data and metadata, sharing methods and code, working through a reproduction study notebook, and exploring a research compendium. 
 
-The main research question at hand is to see if this QGIS study can be accurately reproduced using python packages such as GeoPandas and Pandas.
+The main research question at hand is to see if this QGIS study can be accurately reproduced using Python packages such as GeoPandas and Pandas.
 
 ## Materials and procedure
 
