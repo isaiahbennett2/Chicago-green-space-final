@@ -226,3 +226,4 @@ The authors of this preregistration state that they completed this preregistrati
 This report is based upon the template for Reproducible and Replicable Research in Human-Environment and Geographical Sciences, DOI:[10.17605/OSF.IO/W29MQ](https://doi.org/10.17605/OSF.IO/W29MQ)
 
 ## References
+Wolch, J., Wilson, J. P., & Fehrenbach, J. (2005). Parks and Park Funding in Los Angeles: An Equity-Mapping Analysis. Urban Geography, 26(1), 4–35. [https://doi.org/10.2747/0272-3638.26.1.4] 
