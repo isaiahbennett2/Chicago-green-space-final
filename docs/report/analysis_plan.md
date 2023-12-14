@@ -1,23 +1,38 @@
-# Title of Study
-
+# Reproduction of Urban Environmental Justice of Green Space Access in Chicago
 ### Authors
 
-- First Name Last Name\*, email address, @githubname, ORCID link, affiliated institution(s)
-- First Name Last Name, email address, @githubname, ORCID link, affiliated institution(s)
+- Isaiah Bennett\*, ibennett@middlebury.edu, @isaiahbennett2, ORCID link, Middlebury
+- Tate Sutter, tsutter@middlebury.edu, @githubname, ORCID link, affiliated institution(s)
 
 \* Corresponding author and creator
 
 ### Abstract
 
-Write a brief abstract about your research project.
+This study is a *reproduction* of:
 
-If the project is a reproduction or replication study, include a declaration of the study type with a full reference to the original study.
-For example:
+The lab called "Urban Environmental Justice of Green Space Access in Chicago" from Middlebury College's Human Geography with GIS class. 
 
-This study is a *replication* of:
+The abstract of the original study is as follows: 
 
-> citation to prior study
+Green space provide numerous public health, social, and environmental benefits to cities and their residents. These include
+mitigation of urban heat, improved storm water management and water quality, improved air quality, expanded access to
+exercise, and the social-psychological benefits of enjoying nature.
 
+In this lab, we will conduct a GIS study similar to Wolch, Wilson and Fehrenbach's (2005) research on access to green
+spaces in Los Angeles, California. Wolch et al's purpose was to assess the environmental justice implications of municipal
+green spaces and recreation funding policies (Proposition K), asking whether minority groups, and especially minority
+children, were disproportionately excluded from access to green spaces. They operationalized the concept of "access" in
+terms of both the proximity and the total area of green spaces, and found significant disparities between racial/ethnic
+groups, rooted in histories of bias and segregation.
+
+Our purpose is to assess people's access to green space (parks and forests) in segregated neighborhoods of Chicago. To do
+so, we will estimate indicators of access to green space according to regions where Asian, Black, Latinx, or White
+ethnic/racial groups are the majority (60% of the population or more), and Mixed neighborhoods where no single group
+makes up 60% or more of the population. The indicators of green space access are:
+
+• Percentage of people living within 0.25 miles of a green space
+
+• Green space area per person (in square meters)
 A graphical abstract of the study could also be included as an image here.
 
 ### Study metadata
@@ -38,11 +53,11 @@ A graphical abstract of the study could also be included as an image here.
 
 #### Original study spatio-temporal metadata
 
-- `Spatial Coverage`: extent of original study
-- `Spatial Resolution`: resolution of original study
-- `Spatial Reference System`: spatial reference system of original study
-- `Temporal Coverage`: temporal extent of original study
-- `Temporal Resolution`: temporal resolution of original study
+- `Spatial Coverage`: The city of Chicago, Illinois
+- `Spatial Resolution`: Tracts
+- `Spatial Reference System`: EPSG 6454
+- `Temporal Coverage`: Decennial census
+- `Temporal Resolution`: 2010
 
 ## Study design
 
