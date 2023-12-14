@@ -1,10 +1,7 @@
 # Reproduction of Urban Environmental Justice of Green Space Access in Chicago
 ### Authors
 
-- Isaiah Bennett\*, ibennett@middlebury.edu, @isaiahbennett2, ORCID link, Middlebury
-- Tate Sutter, tsutter@middlebury.edu, @githubname, ORCID link, affiliated institution(s)
-
-\* Corresponding author and creator
+- Isaiah Bennett
 
 ### Abstract
 
@@ -14,8 +11,8 @@ The lab called "Urban Environmental Justice of Green Space Access in Chicago" fr
 
 The abstract of the original study is as follows: 
 
-Green space provide numerous public health, social, and environmental benefits to cities and their residents. These include
-mitigation of urban heat, improved storm water management and water quality, improved air quality, expanded access to
+Green space provides numerous public health, social, and environmental benefits to cities and their residents. These include
+mitigation of urban heat, improved stormwater management and water quality, improved air quality, expanded access to
 exercise, and the social-psychological benefits of enjoying nature.
 
 In this lab, we will conduct a GIS study similar to Wolch, Wilson and Fehrenbach's (2005) research on access to green
@@ -61,185 +58,172 @@ A graphical abstract of the study could also be included as an image here.
 
 ## Study design
 
-Describe how the study relates to prior literature, e.g. is it a **original study**, **meta-analysis study**, **reproduction study**, **reanalysis study**, or **replication study**?
+This study is a reproduction study of an unpublished geography study that was made for Middlebury College's Human Geography with GIS class to be done in QGIS. I completed the study last spring when I was in the course Human Geography with GIS, but wanted to revisit it through a computational environment to contribute to the world of reproducible science. Since this is not a computationally intensive study, its purpose is to act as a simple example to show new GIScientists what the world of reproduction lools like by demonstrating easily digestible components of reproducible research such as making a preanalysis plan (preregistration), setting up a reproducible computational environment, sharing data and metadata, sharing methods and code, working through a reproduction study notebook, and exploring a research compendium. 
 
-Also describe the original study archetype, e.g. is it **observational**, **experimental**, **quasi-experimental**, or **exploratory**?
-
-Enumerate specific **hypotheses** to be tested or **research questions** to be investigated here, and specify the type of method, statistical test or model to be used on the hypothesis or question.
+The main research question at hand is to see if this QGIS study can be accurately reproduced using python packages such as GeoPandas and Pandas.
 
 ## Materials and procedure
 
 ### Computational environment
 
-Define the hardware, operating system, and software requirements for the research.
-Include citations to important software projects, plugins or packages and their versions.
+This study will be conducted on a MacBook Air 2022 on MacOS 13.5.2 using Jupyter Labs. Packages loaded in the study include pyhere, pandas, geopandas, folium, branca.colormap, matplotlib.pyplot, and matplotlib.patches
 
 ### Data and variables
 
-Describe the **data sources** and **variables** to be used.
-Data sources may include plans for observing and recording **primary data** or descriptions of **secondary data**.
-For secondary data sources with numerous variables, the analysis plan authors may focus on documenting only the variables intended for use in the study.
-
-Primary data sources for the study are to include ... .
-Secondary data sources for the study are to include ... .
-
-Each of the next subsections describes one data source.
-
-#### Primary data source1 name
+#### Tracts2010
 
 **Standard Metadata**
 
-- `Abstract`: Brief description of the data source
-- `Spatial Coverage`: Specify the geographic extent of your study. This may be a place name and link to a feature in a gazetteer like GeoNames or OpenStreetMap, or a well known text (WKT) representation of a bounding box.
-- `Spatial Resolution`: Specify the spatial resolution as a scale factor, description of the level of detail of each unit of observation (including administrative level of administrative areas), and/or or distance of a raster GRID size
-- `Spatial Reference System`: Specify the geographic or projected coordinate system for the study
-- `Temporal Coverage`: Specify the temporal extent of your study---i.e. the range of time represented by the data observations.
-- `Temporal Resolution`: Specify the temporal resolution of your study---i.e. the duration of time for which each observation represents or the revisit period for repeated observations
-- `Lineage`: Describe and/or cite data sources and/or methodological steps planned to create this data source.
-  - sampling scheme, including spatial sampling
-  - target sample size and method for determining sample size
-  - stopping criteria for data collection and sampling (e.g. sample size, time elapsed)
-  - de-identification / anonymization
-  - experimental manipulation
-- `Distribution`: Describe who will make the data available and how?
-- `Constraints`: Legal constraints for *access* or *use* to protect *privacy* or *intellectual property rights*
-- `Data Quality`: State any planned quality assessment
-- `Variables`: For each variable, enter the following information. If you have two or more variables per data source, you may want to present this information in table form (shown below)
-  - `Label`: variable name as used in the data or code
-  - `Alias`: intuitive natural language name
-  - `Definition`: Short description or definition of the variable. Include measurement units in description.
-  - `Type`: data type, e.g. character string, integer, real
-  - `Accuracy`: e.g. uncertainty of measurements
-  - `Domain`: Expected range of Maximum and Minimum of numerical data, or codes or categories of nominal data, or reference to a standard codebook
-  - `Missing Data Value(s)`: Values used to represent missing data and frequency of missing data observations
-  - `Missing Data Frequency`: Frequency of missing data observations: not yet known for data to be collected
+- `Title`: Tracts2010.shp
+- `Abstract`: census tracts from the 2010 Census for Chicago containing with demographic data joined from the P2 
+- `Spatial Coverage`: The city of Chicago, Illinois
+- `Spatial Resolution`: Tracts
+- `Spatial Reference System`: EPSG 6454
+- `Temporal Coverage`: 
+- `Temporal Resolution`: 2010
+- `Lineage`: Data was downloaded from Middlebury College Geog 120 Week 04 Lab: Urban Models of Segregation by Race and Class which collected the data from Steven Manson, Jonathan Schroeder, David Van Riper, and Steven Ruggles. IPUMS National Historical
+Geographic Information System: Version 13.0 [Database]. Minneapolis: University of Minnesota. 2018. http://doi.org/10.18128/D050.V13.0.
+- `Distribution`: Data is available 
+- `Constraints`: No legal constraints
+- `Data Quality`: No planned quality assessment
 
 | Label | Alias | Definition | Type | Accuracy | Domain | Missing Data Value(s) | Missing Data Frequency |
 | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
-| variable1 | ... | ... | ... | ... | ... | ... | ... |
-| variable2 | ... | ... | ... | ... | ... | ... | ... |
+| fid| :--: | object id | int
+| STATEFP10| :--: | state id | int
+| COUNTYFP10| :--: | county id | int
+| TRACTCE10| :--: | tract id | int
+| GEOID10| :--: | geography id | int
+| NAME10| :--: | ? |  int
+| NAMELSAD10| :--: | census tract name | string 
+| GISJOIN| :--: | uniquely identifies tracts for purpose of joining to geographic data | string
+| PopTotal| :--: | total population |  int
+| Latinx| :--: | total Hispanic or Latino/Latina population | int
+| NotLatinx| :--: | total non-Hispanic White population | int
+| White| :--: | total non-Hispanic White population | int
+| Black| :--: | total non-Hispanic Black or African American population | int
+| Asian| :--: | total non-Hispanic Asian population | int
+| TwoOrMore| :--: | ? | int
+| MedHouseVa| :--: | median house value for owner-occupied houses | int
+| MedGrossRe| :--: | median gross monthly rent (including utilities) | int
+| pctWhite| :--: | percent white population | double
+| pctBlack| :--: | percent black population | double
+| pctLatinx| :--: | percent latinx population | double
+| pctAsian| :--: | percent asian population | double
 
-#### Primary data source2 name
-
-... same form as above...
-
-#### Secondary data source1 name
+#### Blocks 2010
 
 **Standard Metadata**
 
-- `Abstract`: Brief description of the data source
-- `Spatial Coverage`: Specify the geographic extent of your study. This may be a place name and link to a feature in a gazetteer like GeoNames or OpenStreetMap, or a well known text (WKT) representation of a bounding box.
-- `Spatial Resolution`: Specify the spatial resolution as a scale factor, description of the level of detail of each unit of observation (including administrative level of administrative areas), and/or or distance of a raster GRID size
-- `Spatial Reference System`: Specify the geographic or projected coordinate system for the study
+- `Title`: Blocks2010.shp
+- `Abstract`: census blocks from the 2010 Census for Chicago containing with demographic data joined from the P2
+- `Spatial Coverage`: The city of Chicago, Illinois
+- `Spatial Resolution`: Block groups
+- `Spatial Reference System`: EPSG 6454
 - `Temporal Coverage`: Specify the temporal extent of your study---i.e. the range of time represented by the data observations.
-- `Temporal Resolution`: Specify the temporal resolution of your study---i.e. the duration of time for which each observation represents or the revisit period for repeated observations
-- `Lineage`: Describe and/or cite data sources and/or methodological steps used to create this data source
-- `Distribution`: Describe how the data is distributed, including any persistent identifier (e.g. DOI) or URL for data access
-- `Constraints`: Legal constraints for *access* or *use* to protect *privacy* or *intellectual property rights*
-- `Data Quality`: State result of quality assessment or state "Quality unknown"
-- `Variables`: For each variable, enter the following information. If you have two or more variables per data source, you may want to present this information in table form (shown below)
-  - `Label`: variable name as used in the data or code
-  - `Alias`: intuitive natural language name
-  - `Definition`: Short description or definition of the variable. Include measurement units in description.
-  - `Type`: data type, e.g. character string, integer, real
-  - `Accuracy`: e.g. uncertainty of measurements
-  - `Domain`: Range (Maximum and Minimum) of numerical data, or codes or categories of nominal data, or reference to a standard codebook
-  - `Missing Data Value(s)`: Values used to represent missing data and frequency of missing data observations
-  - `Missing Data Frequency`: Frequency of missing data observations
+- `Temporal Resolution`: 2010
+- `Lineage`: Data was downloaded from Middlebury College Geog 120 Week 07 Lab which collected the data from Steven Manson, Jonathan Schroeder, David Van Riper, and Steven Ruggles. IPUMS National Historical
+Geographic Information System: Version 13.0 [Database]. Minneapolis: University of Minnesota. 2018. http://doi.org/10.18128/D050.V13.0.
+- `Distribution`: Data is available 
+- `Constraints`: No legal constraints
+- `Data Quality`: No planned quality assessment
 
 | Label | Alias | Definition | Type | Accuracy | Domain | Missing Data Value(s) | Missing Data Frequency |
 | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
-| variable1 | ... | ... | ... | ... | ... | ... | ... |
-| variable2 | ... | ... | ... | ... | ... | ... | ... |
+| GEO.id | ... | Id | string | ... | ... | ... | ... |
+| GEO.id2 | ... | Id2 | string | ... | ... | ... | ... | 
+| GEO.display-label | ... | Geography | geometry | ... | ... | ... | ... |
+| D001 | ... | Total Population | int | ... | ... | ... | ... |
+| D002 | ... | Hispanic or Latino | int | ... | ... | ... | ... |
+| D003 | ... | Not Hispanic or Latino | int | ... | ... | ... | ... |
+| D004 | ... | Not Hispanic or Latino: - Population of one race | int | ... | ... | ... | ... |
+| D005 | ... | Not Hispanic or Latino: - White alone | int | ... | ... | ... | ... |
+| D006 | ... | Not Hispanic or Latino: - Black or African American alone | int | ... | ... | ... | ... |
+| D007 | ... | Not Hispanic or Latino: - American Indian and Alaska Native alone | int | ... | ... | ... | ... |
+| D008 | ... | Not Hispanic or Latino: - Asian alone | int | ... | ... | ... | ... |
+| D009 | ... | Not Hispanic or Latino: - Native Hawaiian and Other Pacific Islander alone | int | ... | ... | ... | ... |
+| D010 | ... | Not Hispanic or Latino: - Some Other Race alone | int | ... | ... | ... | ... |
 
-#### Secondary data source2 name
 
-... same form as above...
+#### Parks
+
+**Standard Metadata**
+
+- `Title`: parks.shp
+- `Abstract`: parks in Chicago
+- `Spatial Coverage`: The city of Chicago, Illinois
+- `Spatial Resolution`: park polygons 
+- `Spatial Reference System`: EPSG 6454
+- `Temporal Coverage`: Specify the temporal extent of your study---i.e. the range of time represented by the data observations.
+- `Temporal Resolution`: 2010
+- `Lineage`: Data was downloaded from Middlebury College Geog 120 Week 07 Lab Urban Environmental Justice of Green Space Access in Chicago
+- `Distribution`: Data is available 
+- `Constraints`: No legal constraints
+- `Data Quality`: No planned quality assessment
+
+| Label | Alias | Definition | Type | Accuracy | Domain | Missing Data Value(s) | Missing Data Frequency |
+| :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
+| parkName | :--: | names of every park in Chicago | string |
+
+
+#### Forests
+
+**Standard Metadata**
+​
+- `Title`: forest.shp
+- `Abstract`: forest areas in Chicago
+- `Spatial Coverage`: The city of Chicago, Illinois
+- `Spatial Resolution`: forest polygons
+- `Spatial Reference System`: EPSG 6454
+- `Temporal Coverage`: Specify the temporal extent of your study---i.e. the range of time represented by the data observations.
+- `Temporal Resolution`: 2010
+- `Lineage`: Data was downloaded from Middlebury College Geog 120 Week 07 Lab Urban Environmental Justice of Green Space Access in Chicago
+- `Distribution`: Data is available 
+- `Constraints`: No legal constraints
+- `Data Quality`: No planned quality assessment 
+
+| Label | Alias | Definition | Type | Accuracy | Domain | Missing Data Value(s) | Missing Data Frequency |
+| :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
+|  NAME | :--: | single multi part polygon with all forest areas | string | 
 
 ### Prior observations  
 
-Prior experience with the study area, prior data collection, or prior observation of the data can compromise the validity of a study, e.g. through p-hacking.
-Therefore, disclose any prior experience or observations at the time of study pre-registration here, with example text below:
-
-At the time of this study pre-registration, the authors had _____ prior knowledge of the geography of the study region with regards to the ____ phenomena to be studied.
-This study is related to ____ prior studies by the authors
-
-For each primary data source, declare the extent to which authors had already engaged with the data:
-
-- [ ] no data collection has started
-- [ ] pilot test data has been collected
-- [ ] data collection is in progress and data has not been observed
-- [ ] data collection is in progress and __% of data has been observed
-- [ ] data collection is complete and data has been observed. Explain how authors have already manipulated / explored the data.
-
-For each secondary source, declare the extent to which authors had already engaged with the data:
-
-- [ ] data is not available yet
-- [ ] data is available, but only metadata has been observed
-- [ ] metadata and descriptive statistics have been observed
-- [ ] metadata and a pilot test subset or sample of the full dataset have been observed
-- [ ] the full dataset has been observed. Explain how authors have already manipulated / explored the data.
-
-If pilot test data has been collected or acquired, describe how the researchers observed and analyzed the pilot test, and the extent to which the pilot test influenced the research design.
+This is a reproduction study and I have already seen and conducted this study in QGIS.  
 
 ### Bias and threats to validity
 
-Given the research design and primary data to be collected and/or secondary data to be used, discuss common threats to validity and the approach to mitigating those threats, with an emphasis on geographic threats to validity.
+**Boundary Effects:** Restricted to the extent of the city of Chicago the hard boundary of the city’s border could cut off people along the edges who might access a park within 0.25 miles outside of the city making it seem like they have less access to green space than people within the city.
 
-These include:
-  - uneven primary data collection due to geographic inaccessibility or other constraints
-  - multiple hypothesis testing
-  - edge or boundary effects
-  - the modifiable areal unit problem
-  - nonstationarity
-  - spatial dependence or autocorrelation
-  - temporal dependence or autocorrelation
-  - spatial scale dependency
-  - spatial anisotropies
-  - confusion of spatial and a-spatial causation
-  - ecological fallacy
-  - uncertainty e.g. from spatial disaggregation, anonymization, differential privacy
+**Modifiable Aerial Unit Problem:** The population with access to green space is calculated based on block groups which is one of the smallest enumeration units.  This decreases the chances that diversity in spatial trends is generalized. The racial majority groups are calculated at the tract level, however, which might ignore varying trends between racial majority groups at the block group level.
+
+**Spatial Heterogeneity:** This poses an issue when looking at the differences in greenspaces. Not all greenspaces have the same amenities or quality for their communities to access–just because it technically counts as a greenspace does not mean it has the same inherent value as other greenspaces. The size of the greenspace presents a parallel problem. Since access to greenspace is determined by a constant buffer of 0.25 miles it does not account for the fact that smaller spaces can reach more people proportionally to the size of the green space. Perhaps smaller green spaces should have a smaller buffer since they do not have a proportional capacity of use when compared to larger parks with the same 0.25-mile buffer.
+
 
 ### Data transformations
 
-Describe all data transformations planned to prepare data sources for analysis.
-This section should explain with the fullest detail possible how to transform data from the **raw** state at the time of acquisition or observation, to the pre-processed **derived** state ready for the main analysis.
-Including steps to check and mitigate sources of **bias** and **threats to validity**.
-The method may anticipate **contingencies**, e.g. tests for normality and alternative decisions to make based on the results of the test.
-More specifically, all the **geographic** and **variable** transformations required to prepare input data as described in the data and variables section above to match the study's spatio-temporal characteristics as described in the study metadata and study design sections.
-Visual workflow diagrams may help communicate the methodology in this section.
+The first data transformation is joining the parks and forests shapefiles since they come from different sources but together represent the total green space of Chicago. 
 
-Examples of **geographic** transformations include coordinate system transformations, aggregation, disaggregation, spatial interpolation, distance calculations, zonal statistics, etc.
-
-Examples of **variable** transformations include standardization, normalization, constructed variables, imputation, classification, etc.
-
-Be sure to include any steps planned to **exclude** observations with *missing* or *outlier* data, to **group** observations by *attribute* or *geographic* criteria, or to **impute** missing data or apply spatial or temporal **interpolation**.
+The construction of a new variable, the majority group column, in the tract data frame must also be calculated to continue with the analysis. The majority group is calculated by a threshold of 60% population, so if a tract has a single-race population percentage over 60% then it is given the designation of that race. Only White, Black, Asian, and Latinx are considered in this study as they were the most dominant in Chicago in 2010. The 60% threshold is a seemingly arbitrary choice in the original study design and could be modified to see how it influences the final results.  
 
 ### Analysis
+First, the green space will be buffered by 0.25 miles to create a catchment area to show which blocks are able to access it easily. Using a spatial overlay, blocks with access will be selected if their centroids intersect with the green space buffer. These access blocks containing population data will then be aggregated to the tract level based on their tract id. Population data for each tract is then summed based on their racial majority group. Area calculations are made for the total area that each majority group inhabits, and then subsequently after a clip overlay that selects all of the green space area that overlaps their tracts. Variables of Percent of Population with Access and Green Space Per Person (sqm) are also derived from existing variables.
 
-Describe the methods of analysis that will directly test the hypotheses or provide results to answer the research questions.
-This section should explicitly define any spatial / statistical *models* and their *parameters*, including *grouping* criteria, *weighting* criteria, and *significance thresholds*.
-Also explain any follow-up analyses or validations.
 
 ## Results
 
-Describe how results are to be presented.
+Results will be presented through a single choropleth map that represents the racial majority groups of tracts with green spaces overlayed, and a table that shows the values for Population, Population with Access, Area (sqm), Green Space Area (sqm), Percent Population with Access, and Green Space Per Person (sqm). 
 
 ## Discussion
 
-Describe how the results are to be interpreted *vis a vis* each hypothesis or research question.
+Results will be interpreted based on differences between majority groups to see if there is any demographic that has a disproportionate lack of access to green space. This will be shown most clearly by the Percent of Population with Access and Green Space per Person so that it is standardized for each population. 
 
 ## Integrity Statement
+The authors of this preregistration state that they completed this preregistration to the best of their knowledge and that no other preregistration exists pertaining to the same hypotheses and research.
 
-Include an integrity statement - The authors of this preregistration state that they completed this preregistration to the best of their knowledge and that no other preregistration exists pertaining to the same hypotheses and research.
-If a prior registration *does* exist, explain the rationale for revising the registration here.
 
 ## Acknowledgements
 
-- `Funding Name`: name of funding for the project
-- `Funding Title`: title of project grant
-- `Award info URI`: web address for award information
-- `Award number`: award number
+- `Initial help`: Tate Sutter and I were originally going to work on this together, therefore he contributed to the initial steps of writing the requirements txt to set up the computational environment as well as loading in the the tracts2010 data. Everything after will be conducted by me, Isaiah Bennett.  
 
 This report is based upon the template for Reproducible and Replicable Research in Human-Environment and Geographical Sciences, DOI:[10.17605/OSF.IO/W29MQ](https://doi.org/10.17605/OSF.IO/W29MQ)
 
