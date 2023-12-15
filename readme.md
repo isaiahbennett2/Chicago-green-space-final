@@ -5,7 +5,7 @@ If you use this template for research, please [cite it](template_reference.bib):
 
 ### Authors
 
-- Isaiah Bennett, ibennett@middlebury.edu, @isaiahbennett2, Middlebury
+- Isaiah Bennett, ibennett@middlebury.edu, @isaiahbennett2, Middlebury College
 
 ## Abstract
 
