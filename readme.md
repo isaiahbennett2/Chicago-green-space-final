@@ -75,8 +75,8 @@ The data, procedures, and results of this repository are outlined in three table
 - Results: [results/results_index.csv](results/results_index.csv)
 
 Important local **documents** include:
-- Pre-analysis plan: [docs/report/preanalysis.pdf](docs/report/preanalysis.pdf)
-- Study report: [docs/report/report.pdf](docs/report/report.pdf)
+- Pre-analysis plan: [docs/report/preanalysis.pdf](docs/report/analysis_plan.md)
+- Study report: [docs/report/index.html](docs/report/index.html)
 
 #### Compendium reference
 
